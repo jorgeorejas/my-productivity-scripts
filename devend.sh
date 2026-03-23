@@ -20,8 +20,10 @@ tell application "System Events"
     keystroke "w" using command down
     delay $DELAY
 
-    -- Close left pane (claude)
-    keystroke "w" using command down
+    -- Focus left pane and stop claude, keeping terminal open
+    keystroke "h" using {control down}
+    delay $DELAY
+    keystroke "c" using {control down}
   end tell
 end tell
 EOF
